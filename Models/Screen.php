@@ -71,7 +71,7 @@ class Screen implements IScreen {
                 if ($this->auxScreenMatrix[$row][$column] != 0) continue;
 
                 if ($numeroWidget == 0) {
-                    echo "<td></td>";
+                    echo "<td><span class=\"emptycell\">.</span></td>";
                     continue;
                 }
 
@@ -85,7 +85,7 @@ class Screen implements IScreen {
                     }
                 }
 
-                echo "<td colspan=\"$colSpan\" rowspan=\"$rowSpan\">".
+                echo "<td class=\"widgetcell\" colspan=\"$colSpan\" rowspan=\"$rowSpan\">".
                     $widget->name.
                     "</td>";
             }

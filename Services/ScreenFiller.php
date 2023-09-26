@@ -12,13 +12,37 @@ class ScreenFiller implements IScreenFiller {
 
     public function fill(Array $widgets)
     {
+        $this->loadHeader();
         foreach ($widgets as $widget) {
             if ($this->screen->fits($widget)) {
                 $this->screen->put($widget);
             }
-            else {
-                echo $widget->name . " no entra.</br>";
-            }
+        }
+        $this->loadFooter();
+    }
+
+    public function loadHeader()
+    {
+        $scripts = [];
+        $styles = [
+            "widget_container.css"
+        ];
+
+        foreach ($scripts as $script) {
+            echo "<script src=\"www/js/$script\"></script>";
+        }
+
+        foreach ($styles as $style) {
+            echo "<link rel=\"stylesheet\" href=\"www/css/$style\">";
+        }
+    }
+
+    public function loadFooter()
+    {
+        $scripts = [];
+
+        foreach ($scripts as $script) {
+            echo "<script src=\"www/js/$script\"></script>";
         }
     }
 }
