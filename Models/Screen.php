@@ -86,7 +86,7 @@ class Screen implements IScreen {
                 }
 
                 echo "<td class=\"widgetcell\" colspan=\"$colSpan\" rowspan=\"$rowSpan\">".
-                    $widget->name.
+                    $widget->build().
                     "</td>";
             }
             echo "</tr>";
