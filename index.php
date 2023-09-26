@@ -4,10 +4,9 @@ include_once "Models/Config.php";
 include_once "Models/Screen.php";
 include_once "Services/ScreenFiller.php";
 
-$a = file_get_contents("config.json");
-$b = json_decode($a);
+$config_json_text = file_get_contents("config.json");
 
-$config = Config::FromJSON($a);
+$config = Config::FromJSON($config_json_text);
 $screen = new Screen($config->title, $config->width, $config->height);
 $screenFiller = new ScreenFiller($screen);
 
