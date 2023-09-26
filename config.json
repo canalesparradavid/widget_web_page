@@ -1,0 +1,43 @@
+{
+    "title": "Titulo",
+    "dimensions": [4,6],
+    "theme": "Dark",
+    "widgets": [
+        {
+            "name": "email",
+            "route": "widgets/email",
+            "position": {
+                "x": 1,
+                "y": 1
+            },
+            "dimension": {
+                "width": 1,
+                "height": 1
+            }
+        },
+        {
+            "name": "email2",
+            "route": "widgets/email",
+            "position": {
+                "x": 2,
+                "y": 1
+            },
+            "dimension": {
+                "width": 2,
+                "height": 2
+            }
+        },
+        {
+            "name": "email3",
+            "route": "widgets/email",
+            "position": {
+                "x": 4,
+                "y": 1
+            },
+            "dimension": {
+                "width": 3,
+                "height": 3
+            }
+        }
+    ]
+}
